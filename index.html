@@ -23,7 +23,7 @@
             var txt = "";
             $.ajax({
                 type:"GET",                url:"https://com360degree.com/dev2/MMT/mmtcms/mydata.json",
-                dataType:"JSON",
+                dataType:"JSONP",
                 success:function(data){
                 $.each(data,function(k,v){
                    if(v.type == "text"){
