@@ -22,8 +22,7 @@
         $(document).ready(function(){
             var txt = "";
             $.ajax({
-                type:"GET",
-                url:"mydata.json",
+                type:"GET",                url:"http://com360degree.com/dev2/MMT/mmtcms/mydata.json",
                 dataType:"JSON",
                 success:function(data){
                 $.each(data,function(k,v){
