@@ -1,0 +1,59 @@
+[  
+   {  
+      "type":"text",
+      "required":true,
+      "label":"First Name",
+      "placeholder":"Enter First Name",
+      "className":"form-control",
+      "subtype":"text",
+      "maxlength":"50",
+      "name":"first_name"
+   },
+   {  
+      "type":"text",
+      "label":"Last Name",
+      "placeholder":"Enter Last Name",
+      "className":"form-control",
+      "subtype":"text",
+      "maxlength":"50",
+      "name":"last_name"
+   },
+   {  
+      "type":"textarea",
+      "label":"Message",
+      "placeholder":"Enter Message",
+      "className":"form-control",
+      "name":"textarea-1499079979311",
+      "subtype":"textarea"
+   },
+   {  
+      "type":"radio-group",
+      "label":"Radio Group",
+      "className":"radio-group",
+      "name":"radio-group-name",
+      "values":[  
+         {  
+            "label":"Male",
+            "value":"male",
+            "selected":true 
+         },
+         {  
+            "label":"Female",
+            "value":"female"
+         },
+         {  
+            "label":"others",
+            "value":"others"
+         }
+      ]
+   },
+   {  
+      "type":"button",
+      "subtype":"submit",
+      "label":"Save",
+      "className":"btn btn-primary",
+      "name":"button-1499086388314",
+      "value":"Save",
+      "style":"primary"
+   }
+]
