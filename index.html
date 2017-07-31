@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Bootstrap Link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
 </head>
     <body>
@@ -9,6 +10,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
         <form class="form-vertical">
+            <!-- Dynamic html form container -->
             <div id="form_container"></div>
         </form>
                 </div>
@@ -18,49 +20,7 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script>
-        $(document).ready(function(){
-            var txt = "";
-            $.ajax({
-                type:"GET",                url:"https://com360degree.com/dev2/MMT/mmtcms/mydata.json",
-                dataType:"JSONP",
-                success:function(data){
-                $.each(data,function(k,v){
-                   if(v.type == "text"){
-                   txt +="<div class='form-group col-md-6 col-sm-12 col-xs-12'>";
-                   txt +="<label>"+v.label+"</label>";       
-                   txt +="<input class='"+v.className+"' type='"+v.type+"' name='"+v.name+"' placeholder='"+v.placeholder+"' maxlength='"+v.maxlength+"'>";       
-                   txt += "</div>";
-                   } 
-                  else if(v.type == "textarea"){
-                   txt +="<div class='form-group col-md-6 col-sm-12 col-xs-12'>";
-                   txt +="<label>"+v.label+"</label>";       
-                   txt +="<textarea class='"+v.className+"' type='"+v.type+"' name='"+v.name+"' placeholder='"+v.placeholder+"'>";   
-                   txt += "</textarea>";
-                   txt += "</div>";
-                   }
-                else if(v.type == "radio-group"){
-                     txt +="<div class='form-group col-md-6 col-sm-12 col-xs-12'>";
-                $.each(v.values,function(key,val){ 
-                   txt +="<label>"+val.label+"</label>"; 
-                    if(val.selected == true){
-                   txt +="<input class='"+v.className+"' type='radio' name='"+v.name+"' value='"+val.value+"' checked='"+val.selected+"'>";
-                    }else{
-                    txt +="<input class='"+v.className+"' type='radio' name='"+v.name+"' value='"+val.value+"'>";    
-                    }
-                     });
-                      txt += "</div>";
-                     }else if(v.type == "button") {
-                    txt +="<div class='form-group text-center col-md-12 col-sm-12 col-xs-12'>";
-                   txt +="";       
-                   txt +="<input class='"+v.className+"' subtype='"+v.subtype+"' type='"+v.type+"' name='"+v.name+"' value='"+v.value+"' >";      
-                   txt += "</div>";    
-                  }
-                }); 
-                $("#form_container").html(txt);   
-                }
-            });
-        })
-        </script>
+<!-- External Script Inclusion -->
+<script src="js/script.js"></script>
     </body>
 </html>
