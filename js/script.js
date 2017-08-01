@@ -37,7 +37,7 @@
                    txt += "</div>";    
                   }
                 }); 
-                $("#form_container").html(txt);   
+                $("#formContainer").html(txt);   
                 }
             });
         });
